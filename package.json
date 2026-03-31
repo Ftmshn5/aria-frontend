@@ -1,0 +1,47 @@
+{
+  "name": "aria-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Emotion-focused music curation system frontend",
+  "author": "Team Aria (Bünyamin Başköy, Mehmet Sait Dündar, Fatma Şahin, Amir Şeyh Hadir)",
+  "license": "MIT",
+  "homepage": "https://github.com/Ftmshn5/aria-frontend",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ftmshn5/aria-frontend.git"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.0",
+    "axios": "^1.4.0",
+    "zustand": "^4.3.8",
+    "react-query": "^3.39.3",
+    "framer-motion": "^10.12.8",
+    "tailwindcss": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/user-event": "^13.5.0",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.9",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.41.0",
+    "prettier": "^2.8.8",
+    "vitest": "^0.32.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css,md}\"",
+    "type-check": "tsc --noEmit",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage"
+  }
+}
