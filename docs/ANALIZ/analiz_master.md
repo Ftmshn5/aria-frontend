@@ -9,71 +9,123 @@
 ---
 
 ## 📊 İlerleme Durumu
-**Round 1/10 | Tamamlanma: 0/20 (%0)**
+**Round 3/3 | Tamamlanma: 20/20 (%100) ✅**
 
 ---
 
-## 🔵 ROUND 1 - TEMEL SORULAR
+## 🔵 ROUND 1 - TEMEL SORULAR (Tamamlandı)
 
 ### 📱 A. Uygulama Tipi ve Platform
 
-- [ ] **S1.** Uygulama bir **web sitesi** mi yoksa **mobil uygulama** mı olacak? (Örn: "Sadece web", "Hem web hem mobil", "Sadece mobil")
+- [x] **S1.** Uygulama bir **web sitesi** mi yoksa **mobil uygulama** mı olacak?
+→ **YANIT:** "Sadece web olacak"
 
-- [ ] **S2.** Masaüstü (laptop/PC) ve mobil (telefon/tablet) cihazların ikisinde de çalışması gerekiyor mu? Yoksa sadece biriyle mi sınırlıyız?
+- [x] **S2.** Masaüstü (laptop/PC) ve mobil (telefon/tablet) cihazların ikisinde de çalışması gerekiyor mu?
+→ **YANIT:** "Masaüstü ve mobil cihazların ikisinde de çalışması gerekiyor" (Responsive tasarım)
 
 ### 🎨 B. Tasarım ve Görsel Kimlik
 
-- [ ] **S3.** Projenin bir adı var mı? (Klasör adı "aria" — bu kesin isim mi?)
+- [x] **S3.** Projenin bir adı var mı?
+→ **YANIT:** "Projenin adı ARIA olacak"
 
-- [ ] **S4.** Tasarım açısından ilham aldığınız bir uygulama veya site var mı? (Örn: Spotify, Apple Music, Calm uygulaması, herhangi bir site linki)
+- [x] **S4.** Tasarım açısından ilham aldığınız bir uygulama veya site var mı?
+→ **YANIT:** "Spotify"
 
-- [ ] **S5.** Renk paleti veya tema tercihiniz var mı? (Örn: Karanlık tema, pastel tonlar, neon renkler, gradient'ler)
+- [x] **S5.** Renk paleti veya tema tercihiniz var mı?
+→ **YANIT:** WhatsApp Image ile gönderilen renk paleti:
+  - **Void Eclipse** `#0B0B0B` (Ana arka plan - siyah)
+  - **Abyss Blue** `#2B396D` (Vurgu rengi - koyu mavi)
+  - **Silver Mist** `#E4E4E4` (Metin/açık tonlar)
 
-- [ ] **S6.** Logo veya marka görseli hazır mı? Yoksa biz mi tasarlayacağız?
+- [x] **S6.** Logo veya marka görseli hazır mı?
+→ **YANIT:** "Yok, renk paletlerine uyarak sen hazırla"
 
 ### 🧩 C. Sayfalar ve Özellikler
 
-- [ ] **S7.** Kullanıcı uygulamaya girdiğinde ilk ne görecek? (Örn: Giriş ekranı, doğrudan ana sayfa, mood seçme ekranı)
+- [x] **S7.** Kullanıcı uygulamaya girdiğinde ilk ne görecek?
+→ **YANIT:** "Giriş ekranı"
 
-- [ ] **S8.** Kullanıcı duygu durumunu **nasıl girecek**? (Örn: Metin kutusu, emoji seçimi, slider, hazır mood kartları, veya bunların kombinasyonu)
+- [x] **S8.** Kullanıcı duygu durumunu **nasıl girecek**? 
+→ **YANIT:** "Kullanıcı metin yazar (S27'den alınmıştır)"
 
-- [ ] **S9.** Şarkı önerileri listelendiğinde kullanıcı ne yapabilecek? (Örn: Şarkıyı çalma, beğenme/beğenmeme, playliste ekleme, paylaşma)
+- [x] **S9.** Şarkı önerileri listelendiğinde kullanıcı ne yapabilecek?
+→ **YANIT:** "Şarkıyı çalma, beğenme/beğenmeme, playliste ekleme, paylaşma"
 
-- [ ] **S10.** Şarkılar gerçekten çalınacak mı (embedded player) yoksa sadece liste halinde gösterilecek mi? (Eğer çalınacaksa: Spotify embed mi, YouTube embed mi, kendi player mı?)
+- [x] **S10.** Şarkılar gerçekten çalınacak mı (embedded player) yoksa sadece liste halinde gösterilecek mi?
+→ **YANIT:** "Şarkılar gerçekten çalınacak"
 
 ### 👤 D. Kullanıcı Yönetimi
 
-- [ ] **S11.** Kullanıcı girişi (login/register) olacak mı? Yoksa herkes giriş yapmadan kullanabilecek mi?
+- [x] **S11.** Kullanıcı girişi (login/register) olacak mı?
+→ **YANIT:** "Kullanıcı girişi olacak"
 
-- [ ] **S12.** Profil sayfası olacak mı? (Geçmiş dinlemeler, favori şarkılar, mood geçmişi gibi)
+- [x] **S12.** Profil sayfası olacak mı?
+→ **YANIT:** "Profil sayfası olacak" (Geçmiş dinlemeler, favori şarkılar, mood geçmişi)
 
 ### 🔗 E. Backend Entegrasyonu
 
-- [ ] **S13.** Backend ekibi API'leri hazırladı mı? Yoksa henüz başlamadılar mı? (Frontend'i dummy data ile geliştireceğiz ama API yapısını bilmek önemli)
+- [x] **S13.** Backend ekibi API'leri hazırladı mı? 
+→ **YANIT:** "backend ekibi API'leri hazırlamadı" (Biz dummy data kullanacağız)
 
-- [ ] **S14.** Backend ekibinin kullandığı teknoloji ne? (Örn: Python Flask, FastAPI, Node.js, vb.)
+- [x] **S14.** Backend ekibinin kullandığı teknoloji ne? 
+→ **YANIT:** "fastAPI"
 
-- [ ] **S15.** API dökümantasyonu (Swagger, Postman collection vb.) var mı?
+- [x] **S15.** API dökümantasyonu (Swagger, Postman collection vb.) var mı?
+→ **YANIT:** "yok"
 
 ### 📋 F. Proje Gereksinimleri ve Kısıtlamalar
 
-- [ ] **S16.** Dersin hocası frontend için belirli bir teknoloji istiyor mu? (Örn: "React kullanın", "Vanilla JS olsun", "Vue.js tercih edilir")
+- [x] **S16.** Dersin hocası frontend için belirli bir teknoloji istiyor mu?
+→ **YANIT:** "react"
 
-- [ ] **S17.** Projenin teslim tarihi ne zaman? (Zaman planlaması için önemli)
+- [x] **S17.** Projenin teslim tarihi ne zaman?
+→ **YANIT:** Belirtilmedi.
 
-- [ ] **S18.** Sunumda frontend'in hangi özellikleri **kesinlikle çalışıyor** olmalı? (MVP - Minimum Viable Product nedir?)
+- [x] **S18.** Sunumda frontend'in hangi özellikleri **kesinlikle çalışıyor** olmalı? (MVP)
+→ **YANIT:** MVP Sayfaları:
+  - Login Page
+  - Landing Page
+  - Home Page
+  - Analysis & Suggestion Page
+  - Profile Page
 
 ### 🌍 G. Çoklu Dil ve Erişilebilirlik
 
-- [ ] **S19.** Uygulama dili ne olacak? (Sadece Türkçe, Sadece İngilizce, İkisi de)
+- [x] **S19.** Uygulama dili ne olacak?
+→ **YANIT:** "sadece türkçe"
 
-- [ ] **S20.** Erişilebilirlik (accessibility) gereksinimi var mı? (Ekran okuyucu desteği, yüksek kontrast modu vb.)
+- [x] **S20.** Erişilebilirlik (accessibility) gereksinimi var mı?
+→ **YANIT:** "yok"
 
 ---
 
-> **📝 YANIT YÖNTEMİ:** Bu dosyayı IDE'de açıp soruların yanına `<!-- YANIT: cevabınız -->` şeklinde yorum yazabilirsiniz. Tüm soruları birden yanıtlamak zorunda değilsiniz, kaçını yanıtlarsanız o kadarını işlerim.
->
-> **Örnek:**
-> ```
-> - [ ] **S1.** Uygulama bir web sitesi mi? <!-- YANIT: Sadece web olacak -->
-> ```
+## 🟡 ROUND 2 - DERİNLEŞME SORULARI (Tamamlandı)
+
+### 🎵 H. Müzik Çalma Detayları
+
+- [x] **S21.** Şarkılar hangi kaynaktan çalınacak?
+→ **YANIT:** "spotify api embed"
+
+- [x] **S22.** Çalma listesi (playlist) oluşturma ve kaydetme özelliği olacak mı?
+→ **YANIT:** "olacak"
+
+### 🔐 I. Giriş Sistemi Detayları
+
+- [x] **S23.** Giriş yöntemi ne olacak?
+→ **YANIT:** "e-posta/şifre"
+
+- [x] **S24.** Kayıt sırasında kullanıcıdan hangi bilgiler alınacak?
+→ **YANIT:** "ad, soyad, e-posta, şifre"
+
+### 🏠 J. Sayfa Akışı Detayları
+
+- [x] **S25.** Landing Page ile Login Page farklı sayfalar mı?
+→ **YANIT:** "landing page ile login page farklı sayfalar"
+
+- [x] **S26.** Home Page'de neler olacak?
+→ **YANIT:** "son dinlenen şarkılar, günlük mood önerisi, popüler şarkılar, arama çubuğu"
+
+- [x] **S27.** Analysis & Suggestion Page nasıl çalışacak?
+→ **YANIT:** "kullanıcı metin yazar → AI analiz eder → şarkı listesi gelir, tek sayfa"
+
+---
