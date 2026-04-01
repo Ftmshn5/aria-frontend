@@ -1,13 +1,15 @@
 # Dependencies
 node_modules/
-/.pnp
+.pnp
 .pnp.js
 
-# Testing
-/coverage
-/.nyc_output
+# Build
+dist/
+build/
+.next/
+out/
 
-# Development
+# Environment
 .env
 .env.local
 .env.development.local
@@ -19,35 +21,19 @@ node_modules/
 .idea/
 *.swp
 *.swo
-*~
+
+# OS
 .DS_Store
-*.sublime-project
-*.sublime-workspace
+Thumbs.db
 
-# Build
-/build
-/dist
-/.next
-/out
+# Docker
+docker-compose.override.yml
 
-# Misc
-npm-debug.log
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-lerna-debug.log*
-.pnpm-debug.log*
 
-# OS
-Thumbs.db
-.DS_Store
-
-# Temporary files
-*.tmp
-*.bak
-*.swp
-*~
-
-# Cache
-.cache/
-.eslintcache
+# Antigravity
+.gemini/antigravity/brain/
+.gemini/antigravity/conversations/
