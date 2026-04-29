@@ -3,8 +3,8 @@ import { Play, Heart, Clock, Activity } from 'lucide-react';
 export default function Profile() {
   // Dummy Kullanıcı Verisi
   const user = {
-    name: 'Atıf Ertuğrul',
-    email: 'atif@havsan.cloud',
+    name: 'Kullanıcı',
+    email: 'user@havsan.cloud',
     membership: 'Premium',
     totalAnalyzed: 42,
     favoriteMood: 'Melankolik & Odaklanmış'
@@ -47,7 +47,7 @@ export default function Profile() {
           fontWeight: 'bold',
           boxShadow: '0 0 30px rgba(43, 57, 109, 0.4)'
         }}>
-          AE
+          KU
         </div>
         <div style={{ flex: 1 }}>
           <p style={{ textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '2px', color: 'rgba(228,228,228,0.6)' }}>
