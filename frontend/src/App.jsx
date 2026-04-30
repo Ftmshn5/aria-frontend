@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Login from './pages/Login';
 import Landing from './pages/Landing';
+import Signup from './pages/Signup';
 import MainLayout from './layouts/MainLayout';
 import Profile from './pages/Profile';
 import Home from './pages/Home';
@@ -16,6 +17,7 @@ function App() {
           {/* Public Routes */}
           <Route path="/" element={<Login />} />
           <Route path="/landing" element={<Landing />} />
+          <Route path="/signup" element={<Signup />} />
           
           {/* Protected Routes encapsulated in MainLayout */}
           <Route element={<MainLayout />}>

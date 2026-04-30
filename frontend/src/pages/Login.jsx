@@ -84,7 +84,7 @@ export default function Login() {
         </form>
 
         <div style={{ marginTop: '16px', fontSize: '0.85rem', color: 'rgba(228,228,228,0.5)' }}>
-          Hesabınız yok mu? <a href="#" style={{ color: '#8a9ee0', textDecoration: 'none' }}>Kayıt Ol</a>
+          Hesabınız yok mu? <button onClick={() => navigate('/signup')} style={{ background: 'transparent', border: 'none', color: '#8a9ee0', cursor: 'pointer', padding: 0 }}>Kayıt Ol</button>
         </div>
       </div>
     </div>
