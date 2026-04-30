@@ -107,7 +107,7 @@ export default function Landing() {
 
         <div style={{ display: 'flex', gap: '12px' }}>
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/login')}
             style={{
               background: 'transparent',
               border: '1px solid rgba(228, 228, 228, 0.15)',
@@ -131,7 +131,7 @@ export default function Landing() {
             Giriş Yap
           </button>
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/login')}
             className="btn-primary"
             style={{ padding: '10px 24px', fontSize: '0.9rem' }}
           >
@@ -232,7 +232,7 @@ export default function Landing() {
           animation: 'fadeInUp 0.8s ease-out 0.6s both'
         }}>
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/login')}
             className="btn-primary"
             style={{
               padding: '16px 36px',
@@ -736,7 +736,7 @@ export default function Landing() {
             Yapay zeka destekli duygu kürasyon deneyimini keşfet. Sadece birkaç cümle yaz, sana özel müzikler dinle.
           </p>
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/login')}
             className="btn-primary"
             style={{
               padding: '16px 40px',
