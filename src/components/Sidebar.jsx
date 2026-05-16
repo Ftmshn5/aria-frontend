@@ -1,107 +1,74 @@
-import { Link, useLocation } from 'react-router-dom';
-import { Home, Search, Library, User, LogOut, Music } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { IMusic, IHome, IBrain, IUser, ILogOut, IBookmark } from './Icons';
+import { useAuth } from '../contexts/AuthContext';
 
 export default function Sidebar() {
   const location = useLocation();
+  const navigate = useNavigate();
+  const auth = useAuth();
 
-  const navItems = [
-    { name: 'Ana Sayfa', path: '/home', icon: Home },
-    { name: 'Analiz (Ara)', path: '/analysis', icon: Search },
-    { name: 'Kütüphanem', path: '/library', icon: Library },
+  const nav = [
+    { path: '/home',     label: 'Ana Sayfa', Icon: IHome },
+    { path: '/analysis', label: 'Analiz',    Icon: IBrain },
+    { path: '/library',  label: 'Playlist',  Icon: IMusic },
+    { path: '/saved',    label: 'Kayıtlı',  Icon: IBookmark },
+    { path: '/profile',  label: 'Profil',    Icon: IUser },
   ];
-
-  const bottomItems = [
-    { name: 'Profil', path: '/profile', icon: User },
-    { name: 'Çıkış Yap', path: '/', icon: LogOut },
-  ];
-
-  const getLinkStyle = (path) => {
-    const isActive = location.pathname.startsWith(path);
-    return {
-      display: 'flex',
-      alignItems: 'center',
-      gap: '16px',
-      padding: '12px 20px',
-      color: isActive ? 'var(--color-silver-mist)' : 'rgba(228,228,228,0.5)',
-      textDecoration: 'none',
-      fontWeight: isActive ? '600' : '400',
-      transition: 'all 0.2s ease',
-      borderLeft: isActive ? '3px solid var(--color-abyss-blue)' : '3px solid transparent',
-      background: isActive ? 'rgba(43, 57, 109, 0.1)' : 'transparent',
-    };
-  };
 
   return (
-    <div style={{
-      width: '240px',
-      height: '100vh',
-      background: 'rgba(11, 11, 11, 0.7)',
-      backdropFilter: 'blur(10px)',
-      borderRight: '1px solid rgba(228, 228, 228, 0.05)',
-      display: 'flex',
-      flexDirection: 'column',
-      position: 'fixed',
-      left: 0,
-      top: 0,
-      zIndex: 100
+    <aside style={{
+      width: 220, minHeight: '100vh', position: 'fixed', left: 0, top: 0, zIndex: 100,
+      background: '#0A0A10', borderRight: '1px solid var(--bd)',
+      display: 'flex', flexDirection: 'column',
     }}>
-      {/* Logo Area */}
-      <div style={{
-        padding: '30px 20px',
-        display: 'flex',
-        alignItems: 'center',
-        gap: '12px',
-        marginBottom: '20px'
-      }}>
-        <div style={{ background: 'var(--color-abyss-blue)', padding: '8px', borderRadius: '50%' }}>
-          <Music size={24} color="var(--color-silver-mist)" />
+      {/* Logo */}
+      <div style={{ padding: '28px 22px 24px', borderBottom: '1px solid var(--bd)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <div style={{
+            width: 30, height: 30, background: 'var(--ac)', borderRadius: 7,
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+          }}>
+            <IMusic size={15} color="#fff" />
+          </div>
+          <span style={{ fontFamily: "'Montserrat',sans-serif", fontWeight: 900, fontSize: '1.1rem', letterSpacing: '-0.05em', color: 'var(--t1)' }}>ARIA</span>
         </div>
-        <span className="text-gradient" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>ARIA</span>
       </div>
 
-      {/* Main Navigation */}
-      <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
-        {navItems.map((item) => {
-          const Icon = item.icon;
+      {/* Nav */}
+      <nav style={{ flex: 1, padding: '16px 0' }}>
+        {nav.map(({ path, label, Icon }) => {
+          const on = location.pathname === path;
           return (
-            <Link 
-              key={item.path} 
-              to={item.path} 
-              style={getLinkStyle(item.path)}
-              onMouseEnter={(e) => {
-                if (!location.pathname.startsWith(item.path)) {
-                  e.currentTarget.style.color = 'var(--color-silver-mist)';
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (!location.pathname.startsWith(item.path)) {
-                  e.currentTarget.style.color = 'rgba(228,228,228,0.5)';
-                }
-              }}
-            >
-              <Icon size={22} />
-              {item.name}
+            <Link key={path} to={path} style={{
+              width: '100%', display: 'flex', alignItems: 'center', gap: 11,
+              padding: '10px 22px',
+              background: on ? 'rgba(110,106,255,0.1)' : 'transparent',
+              color: on ? 'var(--ac)' : 'var(--t2)',
+              fontWeight: on ? 600 : 400, fontSize: '0.88rem',
+              borderLeft: on ? '2px solid var(--ac)' : '2px solid transparent',
+              transition: 'all var(--tr)', textAlign: 'left', textDecoration: 'none',
+            }}
+            onMouseEnter={e => { if (!on) { e.currentTarget.style.color = 'var(--t1)'; e.currentTarget.style.background = 'rgba(255,255,255,0.03)'; } }}
+            onMouseLeave={e => { if (!on) { e.currentTarget.style.color = 'var(--t2)'; e.currentTarget.style.background = 'transparent'; } }}>
+              <Icon size={16} color={on ? 'var(--ac)' : 'currentColor'} />
+              {label}
             </Link>
           );
         })}
-      </div>
+      </nav>
 
-      {/* Bottom Navigation */}
-      <div style={{ display: 'flex', flexDirection: 'column', paddingBottom: '30px' }}>
-        {bottomItems.map((item) => {
-          const Icon = item.icon;
-          return (
-            <Link 
-              key={item.path} 
-              to={item.path} 
-              style={{...getLinkStyle(item.path), borderLeft: '3px solid transparent'}}
-            >
-              <Icon size={22} />
-              {item.name}
-            </Link>
-          );
-        })}
+      {/* Logout */}
+      <div style={{ padding: '16px 0 28px', borderTop: '1px solid var(--bd)' }}>
+        <button onClick={() => auth.logout().then(() => navigate('/login'))} style={{
+          width: '100%', display: 'flex', alignItems: 'center', gap: 11,
+          padding: '10px 22px', color: 'var(--t3)', fontSize: '0.88rem',
+          transition: 'color var(--tr)',
+        }}
+        onMouseEnter={e => e.currentTarget.style.color = 'var(--red)'}
+        onMouseLeave={e => e.currentTarget.style.color = 'var(--t3)'}>
+          <ILogOut size={16} /> Çıkış Yap
+        </button>
       </div>
-    </div>
+    </aside>
   );
 }

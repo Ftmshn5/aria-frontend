@@ -1,21 +1,23 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, Navigate } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
+import { useAuth } from '../contexts/AuthContext';
+import { Spinner } from '../components/Icons';
 
 export default function MainLayout() {
+  const { user, loading } = useAuth();
+
+  if (loading) return (
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', background: 'var(--bg)' }}>
+      <Spinner size={36} />
+    </div>
+  );
+
+  if (!user) return <Navigate to="/login" replace />;
+
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', background: 'var(--color-void-eclipse)' }}>
-      {/* Sol Menü */}
+    <div style={{ display: 'flex', minHeight: '100vh' }}>
       <Sidebar />
-      
-      {/* Ana İçerik Alanı (Sidebar sonrası 240px boşluk bırakılarak sağ tarafa yerleşir) */}
-      <main style={{ 
-        flex: 1, 
-        marginLeft: '240px', 
-        padding: '40px',
-        overflowY: 'auto',
-        height: '100vh',
-        background: 'radial-gradient(ellipse at top right, #1a2240 0%, #0b0b0b 60%)'
-      }}>
+      <main style={{ marginLeft: 220, flex: 1, padding: '44px 48px', minHeight: '100vh' }}>
         <Outlet />
       </main>
     </div>
